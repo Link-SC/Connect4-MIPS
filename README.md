@@ -1,2 +1,3 @@
 # Connect4-MIPS
-The classic connect-4 game written in MIPS assembly language. Support two players against each other.
+Welcome to my CS0447 mid-term project.
+The classic connect-4 game written in MIPS assembly language. This game support two players against each other.
