@@ -153,7 +153,6 @@ back:
 
 #----------Check if the game is over----------			
 test_winCheck:
-	beq $s7, 42, exit_tie				#Tie or not (42 total steps)
 	add $t2, $zero, $t0				#Set $t2 to be the chess piece pattern
 	#Determine the horizontal direction of the piece
 	add $t0, $zero, $zero
@@ -187,6 +186,8 @@ test_winCheck:
 	add $s1, $s0, $zero
 	jal test_rowNumber
 	jal lower_left
+	#Tie or not (42 total steps)
+	beq $s7, 42, exit_tie
 	#Move on to the next turn
 	beq $s6, 1, player2_turn
 	beq $s6, 2, player1_turn
